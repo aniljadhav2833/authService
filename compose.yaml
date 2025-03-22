@@ -7,6 +7,7 @@ services:
       - 'MYSQL_ROOT_PASSWORD=verysecret'
       - 'MYSQL_USER=myuser'
     ports:
-      - '3306'
+      - '3307:3306'
     volumes:
       - C:\Users\user\Downloads\Dosti\DBs\AuthServiceDB:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
