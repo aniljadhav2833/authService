@@ -2,9 +2,11 @@ services:
   mysql:
     image: 'mysql:latest'
     environment:
-      - 'MYSQL_DATABASE=mydatabase'
+      - 'MYSQL_DATABASE=authService'
       - 'MYSQL_PASSWORD=secret'
       - 'MYSQL_ROOT_PASSWORD=verysecret'
       - 'MYSQL_USER=myuser'
     ports:
       - '3306'
+    volumes:
+      - C:\Users\user\Downloads\Dosti\DBs\AuthServiceDB:/var/lib/mysql
